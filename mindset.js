@@ -91,3 +91,15 @@ const flatArr = arr.reduce((acc, flat) => {
     return acc.concat(flat)
 }, []);
 console.log(flatArr);
+
+// Highest Number Finder
+
+const allNumbers = [3, 9, 1, 12, 7];
+const highestNumber = allNumbers.reduce((acc, number) => {
+    if (acc > number) {
+        return acc
+    } else {
+        return number
+    }
+}, 0);
+console.log(highestNumber);
