@@ -86,3 +86,8 @@ console.log(lettersCount);
 
 //Flatten Nested Array
 
+const arr = [[10, 20], [30, 40, 50], [60]];
+const flatArr = arr.reduce((acc, flat) => {
+    return acc.concat(flat)
+}, []);
+console.log(flatArr);
