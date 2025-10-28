@@ -72,3 +72,17 @@ const wordsCount = words.reduce((acc, word) => {
 }, 0)
 
 console.log(wordsCount);
+
+
+// Count Frequency (like fruits example)
+
+const letters = ["a", "b", "a", "c", "b", "a"];
+const lettersCount = letters.reduce((acc, letter) => {
+    acc[letter] = (acc[letter] || 0) + 1
+    return acc
+}, {});
+console.log(lettersCount);
+
+
+//Flatten Nested Array
+
