@@ -33,3 +33,23 @@ const totalPrice = products.reduce((acc, current) => {
     return acc + current.price
 }, 0);
 console.log(totalPrice);
+
+// To count the frequency from an array.
+
+const fruits = ["apple", "banana", "apple", "orange", "banana", "apple"];
+
+const count = fruits.reduce((acc, fruit) => {
+    acc[fruit] = (acc[fruit] || 0) + 1
+    return acc
+}, {})
+
+console.log(count);
+
+const pets = ["cat", "dog", "cat", "bird", "dog", "dog", "cat"];
+
+const petsCount = pets.reduce((acc, pet) => {
+    acc[pet] = (acc[pet] || 0) + 1
+    return acc
+}, {})
+
+console.log(petsCount);
