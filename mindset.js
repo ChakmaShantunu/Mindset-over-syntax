@@ -1,0 +1,22 @@
+
+//Step by step mindest
+// 1. even numbers are those who are divided by 2
+// 2. approach will be filter the array
+// 3. filter method use because if you want to delete someting from the array.
+
+// Filter method:
+const numbers = [1, 2, 3, 4, 5, 6];
+const evenNumbers = numbers.filter(num => num % 2 === 0).length
+// console.log(evenNumbers);
+
+//Nou counting the even nubmers
+
+console.log(evenNumbers);
+
+// Reduce method:
+// the sum of the numbers
+const nubmersArr = [10, 20, 30, 40];
+const sums = nubmersArr.reduce((acc, current) => {
+    return acc + current
+}, 0)
+console.log(sums);
