@@ -53,3 +53,22 @@ const petsCount = pets.reduce((acc, pet) => {
 }, {})
 
 console.log(petsCount);
+
+// Flattening an array
+
+const nested = [[1, 2], [3, 4], [5, 6]];
+const flat = nested.reduce((acc, nes) => {
+    return acc.concat(nes)
+}, []);
+
+console.log(flat);
+
+// Word Length Count
+
+const words = ["cat", "elephant", "dog"];
+
+const wordsCount = words.reduce((acc, word) => {
+    return acc + word.length
+}, 0)
+
+console.log(wordsCount);
