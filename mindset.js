@@ -20,3 +20,16 @@ const sums = nubmersArr.reduce((acc, current) => {
     return acc + current
 }, 0)
 console.log(sums);
+
+// Extracting the total value from an object
+
+const products = [
+    { name: "Pen", price: 10 },
+    { name: "Book", price: 40 },
+    { name: "Bag", price: 100 },
+]
+
+const totalPrice = products.reduce((acc, current) => {
+    return acc + current.price
+}, 0);
+console.log(totalPrice);
