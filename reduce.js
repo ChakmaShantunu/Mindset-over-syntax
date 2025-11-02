@@ -126,5 +126,17 @@ const count = surveyResponse.reduce((table, response) => {
     }
     return table
 }, {});
-console.log(count);
+// console.log(count);
+
+const words = ["apple", "banana", "apple", "mango", "banana", "apple", "grape"];
+
+const wordsCount = words.reduce((acc, response) => {
+    if (acc[response]) {
+        acc[response] += 1
+    } else {
+        acc[response] = 1
+    }
+    return acc
+}, {});
+console.log(wordsCount);
 
