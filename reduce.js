@@ -138,5 +138,16 @@ const wordsCount = words.reduce((acc, response) => {
     }
     return acc
 }, {});
-console.log(wordsCount);
+// console.log(wordsCount);
+
+const votes = ["Yes", "No", "Yes", "Abstain", "No", "Yes", "Yes", "No"];
+const votesCount = votes.reduce((acc, response) => {
+    if(acc[response]) {
+        acc[response] += 1
+    } else {
+        acc[response] = 1
+    }
+    return acc
+}, {});
+console.log(votesCount);
 
