@@ -142,12 +142,28 @@ const wordsCount = words.reduce((acc, response) => {
 
 const votes = ["Yes", "No", "Yes", "Abstain", "No", "Yes", "Yes", "No"];
 const votesCount = votes.reduce((acc, response) => {
-    if(acc[response]) {
+    if (acc[response]) {
         acc[response] += 1
     } else {
         acc[response] = 1
     }
     return acc
 }, {});
-console.log(votesCount);
+// console.log(votesCount);
+
+const sentence = "Programming Hero is the best platform for learning web development";
+const vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
+const stringCount = sentence.toLowerCase().split('').reduce((acc, response) => {
+
+    if (vowels.includes(response)) {
+        if (acc[response]) {
+            acc[response] += 1
+        } else {
+            acc[response] = 1
+        }
+    }
+    return acc
+}, {});
+console.log(stringCount);
+
 
