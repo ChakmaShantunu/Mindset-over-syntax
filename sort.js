@@ -31,7 +31,7 @@ const techTopics = [
 const flatTech = techTopics.flat(Infinity);
 console.log(flatTech);
 
-const filterTag = new Set(techTopics.flat(Infinity));
+const filterTag = [...new Set(techTopics.flat(Infinity))];
 console.log(filterTag);
 
 
