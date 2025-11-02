@@ -55,7 +55,7 @@ const cardItems = [
 const subTotal = cardItems.reduce((acc, item) => {
     return acc + (item.price * item.quantity)
 }, 0);
-console.log(subTotal);
+// console.log(subTotal);
 
 
 
@@ -114,4 +114,17 @@ const scorer = players.reduce((acc, player) => {
 
     return player
 }, players[0]);
-console.log(scorer.name, "has the highest", scorer.goals, "goals");
+// console.log(scorer.name, "has the highest", scorer.goals, "goals");
+
+const surveyResponse = ["A", "A", "B", "B", "B", "C", "C", "D", "D", "D", "E", "E", "F", "F", "F", "G", "G", "H", "H", "H", "I", "I", "J", "J", "J", "K", "K", "L", "L", "L", "M", "M", "N", "N", "N", "O", "O", "P", "P", "P", "Q", "Q", "R", "R", "R", "S", "S", "T", "T", "T", "U", "U", "V", "V", "V", "W", "W", "X", "X", "X", "Y", "Y", "Z", "Z"]
+
+const count = surveyResponse.reduce((table, response) => {
+    if (table[response]) {
+        table[response] += 1
+    } else {
+        table[response] = 1
+    }
+    return table
+}, {});
+console.log(count);
+
