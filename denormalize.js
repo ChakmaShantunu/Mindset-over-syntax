@@ -32,10 +32,41 @@ const userWithPost = users.map(user => {
         ...user, posts: postByUserId[user.id] || []
     }
 })
-console.log(JSON.stringify(userWithPost));
+// console.log(JSON.stringify(userWithPost));
 //? output
 // [
 //   { id: 101, name: 'Alice', posts: [ { id: 2, ... }, { id: 3, ... } ] },
 //   { id: 102, name: 'Bob', posts: [ { id: 1, ... }, { id: 5, ... } ] },
 //   { id: 103, name: 'Charlie', posts: [ { id: 4, ... } ] }
 // ]
+
+
+const products = [
+    { id: 1, name: "Laptop" },
+    { id: 2, name: "Phone" },
+    { id: 3, name: "Keyboard" },
+];
+
+const reviews = [
+    { id: 101, productId: 2, rating: 5, text: "Excellent!" },
+    { id: 102, productId: 1, rating: 4, text: "Pretty good" },
+    { id: 103, productId: 1, rating: 5, text: "Loved it" },
+    { id: 104, productId: 3, rating: 3, text: "Average" },
+    { id: 105, productId: 2, rating: 4, text: "Good value" },
+];
+
+const productByProductId = reviews.reduce((table, review) => {
+    const { productId } = review
+    if (!table[productId]) {
+        table[productId] = []
+    }
+    table[productId].push(review)
+    return table
+}, {});
+
+const postWithReview = products.map(product => {
+    return {
+        ...product, reviews: productByProductId[product.id] || []
+    }
+})
+console.log(JSON.stringify(postWithReview));
